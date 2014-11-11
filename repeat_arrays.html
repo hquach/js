@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+<h4>AngularJS Repeat on Arrays:</h4>
+
+<div data-ng-app="" data-ng-init="cars=[
+	{make:'Honda', model:'Civic'},
+	{make: 'Nissan', model: 'Altima'},
+	{make: 'BMW', model: 'X5'}]">
+
+	<ul>
+		<li data-ng-repeat="x in cars">
+			{{ x.make + ' ' + x.model }}
+		</li>
+	</ul>
+</div>
+
+</body>
+</html>

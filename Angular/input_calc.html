@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+<h4>AngularJS Input Calculations:</h4>
+
+<div data-ng-app="" data-ng-init="quantity='';price=''">
+	<p>Quantity: <input type="text" data-ng-model="quantity"></p>
+	<p>Price: $ <input type="text" data-ng-model="price"></p>
+
+	Total: (q*p) {{quantity * price}}
+</div>
+
+</body>
+</html>

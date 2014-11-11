@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+<div ng-app="" ng-init="fname='John'">
+<!-- HTML5 valid use: "data-ng-"" -->	
+<!-- HTML5 valid use: <div data-ng-app="" data-ng-init="fname='John'"> -->
+
+	<p>Name is: <span ng-bind="fname"></span></p>
+<!-- HTML5 valid use:  <span data-ng-bind="fname="></span></p> -->
+
+</div>
+
+</body>
+</html>
