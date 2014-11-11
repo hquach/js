@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+
+
+</head>
+
+<body>
+<p id="displayText"></p>
+<p id="displayUpperCase"></p> 
+<p id="displayTextLength"></p> 
+<p id="displayOtherMethods"></p>
+<p id="findWithinString"></p>
+<p id="lastofIndex"></p>
+<p id="searchString"></p>
+<p id="sliceString"></p>
+<p id="replaceString"></p>
+<p id="storeAsString"></p>
+<p id="splitInChars"></p>
+<p id="maxValue"></p>
+<p id="minValue"></p>
+
+<br />
+<button onclick="infiniteNumber()">Try it</button>
+<p id="infiniteNum"></p>
+
+<p id="toExponential"></p>
+
+<p id="fixedNum"></p>
+
+<p id="precisionNum"></p>
+
+
+<button onClick="generateRandomNumber()">Click to Generate</button>
+<p id="generateRand"></p>
+
+<p id="roundUp"></p>
+
+<p id="roundDown"></p>
+
+<script type="text/javascript">
+	var txt = "what do i know about space expoloration.";
+	var txtLength = txt.length;
+	//var txtSplit = txt.split(""); //single character(remove space); 
+	var txtSplit = txt.split(" ");	//display each word(add space)
+
+	var maxValued = 123;
+	var minValued = 12;
+	var decimalNum = 32.23423;
+
+	var splitChars = "";
+	var i;
+	for (i = 0; i < txtSplit.length; i++) {
+		splitChars += txtSplit[i] + "<br />"
+	}
+	
+	function infiniteNumber() {
+		var myNumber = 2;
+		var numtxt = "";
+
+		while (myNumber != Infinity) {
+			myNumber = myNumber * myNumber;
+			numtxt = numtxt + myNumber + "<br />";
+		}
+		document.getElementById("infiniteNum").innerHTML = numtxt;
+	}
+
+	//generate a random number
+	function generateRandomNumber() {
+		document.getElementById("generateRand").innerHTML = Math.random();
+	}
+
+
+	/*
+	var bth = txt.search("x");
+
+	function addTH() {
+		var ath;
+
+		if (ath > 3) {
+			document.getElementById("searchString").innerHTML = "th";
+		} else {
+			document.getElementById("searchString").innerHTML = "nd";
+		}
+	}
+	*/
+
+	document.getElementById("displayText").innerHTML = txt;
+	document.getElementById("displayUpperCase").innerHTML = txt.toUpperCase();
+	document.getElementById("displayOtherMethods").innher = txt.charAt();
+	document.getElementById("displayTextLength").innerHTML = "there are " + txtLength + " characters from above.";
+	document.getElementById("findWithinString").innerHTML = txt.indexOf("SDJ");
+	document.getElementById("lastofIndex").innerHTML = txt.lastIndexOf("SFLW");
+	document.getElementById("searchString").innerHTML = "Letter 'x' is in: " + txt.search("x") + " spot.";
+	document.getElementById("sliceString").innerHTML = txt.slice(1, 7);
+	document.getElementById("replaceString").innerHTML = txt.replace("space expoloration.", "computers.");
+	document.getElementById("storeAsString").innerHTML = txtSplit[0];
+	document.getElementById("splitInChars").innerHTML = splitChars;
+
+	document.getElementById("maxValue").innerHTML = maxValued;
+	document.getElementById("minValue").innerHTML = minValued;
+
+	document.getElementById("toExponential").innerHTML = minValued.toExponential(4);
+	document.getElementById("fixedNum").innerHTML = 
+	decimalNum.toFixed() + "<br />" + 
+	decimalNum.toFixed(2) + "<br />" + 
+	decimalNum.toFixed(4);
+
+	document.getElementById("precisionNum").innerHTML = 
+	decimalNum.toPrecision() + "<br />" +
+	decimalNum.toPrecision(2) + "<br />" +
+	decimalNum.toPrecision(4);
+
+	document.getElementById("roundUp").innerHTML = Math.ceil(decimalNum);
+	document.getElementById("roundDown").innerHTML = Math.floor(decimalNum);
+
+
+</script>
+<hr />
+
+
+</body>
+</html>

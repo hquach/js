@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+
+</head>
+
+<body>
+
+<h1>JavaScript Skills Test</h1>
+
+<!-- next -->
+<button type="button" onClick = "document.getElementById('demo').innerHTML = Date()">
+Click Me!
+</button>
+
+<p id="demo"></p>
+
+<hr />
+
+<!-- next -->
+<button type="button" onClick="demo2function()">Click Me!
+	</button>
+
+<p id = "demo2">What?</p>
+
+<script type="text/javascript">
+	function demo2function() {
+		document.getElementById("demo2").innerHTML="Hello World!";
+	}
+
+</script>
+
+<hr />
+
+<!-- next -->
+<img id = "myImage" onClick="changeImage()" src="pic_bulboff.gif">
+
+
+<script type="text/javascript">
+	function changeImage() {
+		var image = document.getElementById("myImage")
+		if (image.src.match("pic_bulboff.gif")) {
+			image.src = "pic_bulbon.gif";
+		} else {
+			image.src = "pic_bulboff.gif";
+		}
+}
+</script>
+
+<hr />
+
+<p id = "font">Change this font bigger and bluer.</p>
+
+<script type="text/javascript">
+	function changeFont() {
+		var x = document.getElementById('font');
+		x.style.fontSize = "25px";
+		x.style.color = "blue";
+	}
+</script>
+
+<button type="button" onClick="changeFont()">Click Me!</button>
+
+<hr />
+
+<!-- next -->
+<p>Enter 1 to 10 only:</p>
+
+<input id="numb" type="number">
+
+<button type = "button" onClick="verifyNumber()">Verify
+</button>
+
+<p id="demo3"></p>
+
+<script type="text/javascript">
+	function verifyNumber() {
+		var x, text;
+		
+		// Get the value of input field with id="numb"
+		x = document.getElementById("numb").value;
+
+		// If x is Not a Number or less than one or greater than 10
+		if (isNaN(x) || x < 1|| x > 10) {
+			text = "Invalid Number.";
+		} else {
+			text = "Number is within range.";
+		}
+		document.getElementById("demo3").innerHTML = text;
+	}
+
+</script>
+
+<hr />
+
+<!-- new -->
+<p id="changeText">Text paragraph</p>
+
+<button type="button" onClick="changeParagraph()">Try it</button>
+
+<script type="text/javascript">
+	function changeParagraph() {
+		document.getElementById("changeText").innerHTML = "paragraph changed.";
+	}
+
+</script>
+
+<hr />
+
+<!-- new -->
+<p id="changeTable">Change to Table</p>
+
+<button type="button" onClick="changetoTable()">Change to Table</button>
+
+<script type="text/javascript">
+	function changetoTable() {
+		document.getElementById("changeTable").innerHTML = 
+		"<table>\
+			<tr>\
+				<td>Jill</td>\
+				<td>Smith</td>\
+				<td>50</td>\
+			</tr>\
+			<tr>\
+				<td>Eve</td>\
+				<td>Jackson</td>\
+				<td>94</td>\
+			</tr>\
+		</table>";
+	}
+</script>
+
+<hr />
+<!-- new -->
+Right now is: 
+
+<script type="text/javascript">
+	document.write(Date());
+</script>
+
+<hr />
+<!-- new -->
+
+<p>debugger</p>
+
+<script type="text/javascript">
+a = 5;
+b = 5;
+c = a+b;
+console.log(c);
+</script>
+
+<hr />
+<!-- new -->
+
+<p id="literals1"></p>
+<p id="literals2"></p>
+
+<script type="text/javascript">
+	document.getElementById("literals1").innerHTML = 123e5;
+	document.getElementById("literals2").innerHTML = 123e-5;
+</script>
+
+<hr />
+<!-- new -->
+
+x = <p id = "xValue"></p> <br />
+y = <p id = "yValue"></p> <br />
+z = (x + y) /2 = <br />
+<p id="mathEquation"></p>
+</table>
+
+<p id="mathEquation"></p>
+
+<script type="text/javascript">
+	var x, y, z;
+	x = 6;
+	y = 6;
+	z = (x + y) / 2;
+
+	document.getElementById("mathEquation").innerHTML = z;
+	document.getElementById("xValue").innerHTML = x;
+	document.getElementById("yValue").innerHTML = y;
+
+</script>
+
+<hr />
+
+<p>Arrays</p>
+
+<p id = "brands"></p><br />
+The third brand is: <p id = 'thirdBrand'></p>
+
+<script type="text/javascript">
+	var sportClothingBrands = ["Nike", "Reebok", "Under Amor", "Adidas"]
+
+	document.getElementById("brands").innerHTML = sportClothingBrands
+	document.getElementById("thirdBrand").innerHTML = sportClothingBrands[2];
+</script>
+
+<hr />
+
+His name is: <p id = "jname"></p>
+
+<script type="text/javascript">
+	var person = {
+		fName : "John",
+		lName : "Smith",
+		age : 39,
+		emailAddress : "johnsmith@example.com"
+	};
+
+	document.getElementById("jname").innerHTML = person.fName + "  " + person.lName + " 's " + " email address is: " + person.emailAddress;
+</script>
+
+<hr />
+
+<h4>Function Invocation:</h4>
+
+<p id="jsFunction"></p>
+
+<script type="text/javascript">
+	function iFunction(a,b) {
+		return a * b;
+	}
+
+	document.getElementById("jsFunction").innerHTML = iFunction(4,5)
+
+</script>
+
+<hr />
+
+<h4>Rounding:</h4>
+
+<p id = "celsius"></p>
+
+<script type="text/javascript">
+	function toCelsius(f) {
+		return (5/9) * (f-32);
+	}
+
+	document.getElementById("celsius").innerHTML = toCelsius(52).toFixed(0);
+
+</script>
+
+<hr />
+
+<h4>Accessing Objects:</h4>
+
+<p id = "showCar"></p>
+
+<script type="text/javascript">
+	var cars = {
+		make : "Lexus",
+		model : "GS400"
+	};
+
+	document.getElementById("showCar").innerHTML = cars["make"] + "  " + cars["model"]
+</script>
+
+<hr />
+
+<h4>Accessing Objects:</h4>
+
+<p id = "tvShow"></p>
+
+<script type="text/javascript">
+	var networkShow = {
+		network : "CBS",
+		show : "Criminal Minds",
+		fullShow : function(c) {
+			return this.network + "  " + this.show;
+		}
+	};
+
+	document.getElementById("tvShow").innerHTML = networkShow.fullShow();
+
+</script>
+
+<hr />
+
+<h4>JavaScript Rollover (Mouseover) lightbulb</h4>
+
+<a href="" onMouseOver="document.MyImage.src='pic_bulbon.gif';" onMouseOut="document.MyImage.src='pic_bulboff.gif';"> 
+<img src="pic_bulboff.gif" name="MyImage"> 
+
+</a>
+
+<hr />
+
+<h4>Mouse Event Counters</h4>
+
+<style type="text/css">
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+    float: left;
+    padding: 30px;
+    text-align: center;
+    background-color: "gray";
+}
+
+p {
+	background-color: white;
+}
+
+</style>
+
+<div onmousemove="myMoveFunction()">
+	<p>onmousemove: <br /> <span id="mousedemo">Mouse over me!</span></p>
+</div>
+
+<div onmouseover="myOverFunction()">
+	<p>onmouseover: <br /><span id="mousedemo1">Mouse over me!</span></p>
+</div>
+
+<div onmouseenter="myEnterFunction()">
+	<p>onmouseenter: <br /><span id ="mousedemo2">Mouse over me!</span></p>
+</div>
+
+<script type="text/javascript">
+	var x = 0;
+	var y = 0;
+	var z = 0;
+
+	function myMoveFunction() {
+		document.getElementById("mousedemo").innerHTML = x+=1;
+	}
+
+	function myOverFunction() {
+		document.getElementById("mousedemo1").innerHTML = y+=1;
+	}
+
+	function myEnterFunction() {
+		document.getElementById("mousedemo2").innerHTML = z+=1;
+	}
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
