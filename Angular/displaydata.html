@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+<style>
+table, th , td {
+  border: 1px "grey";
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h4>AngularJS Display Data in Table:</h4>
+
+<div data-ng-app="" data-ng-controller="customersController">
+
+	<table>
+		<tr data-ng-repeat="x in names | orderBy: 'Country' ">
+			<td> {{ x.Name }} </td>
+			<td> {{ x.Country | uppercase }} </td>
+		</tr>
+	</table>
+</div>
+
+<script type="text/javascript">
+	function customersController($scope, $http) {
+		$http.get("http://www.w3schools.com/website/Customers_JSON.php").success(function(response) {$scope.names = response;});
+	}
+</script>
+
+</body>
+</html>

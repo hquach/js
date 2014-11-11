@@ -7,14 +7,12 @@
 
 <body>
 
-<h4>AngularJS Repeat on Arrays via external Controller:</h4>
+<h4>AngularJS Looping with Objects:</h4>
 
 <div data-ng-app="" data-ng-controller="carsController">
-
 	<ul>
-		<li data-ng-repeat="x in cars">
-			{{ x.make + ' ' + x.model }}
-		</li>
+		<li data-ng-repeat="x in cars | orderBy: 'make'">
+			{{ x.make + " " + x.model }}
 	</ul>
 </div>
 

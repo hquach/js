@@ -7,14 +7,15 @@
 
 <body>
 
-<h4>AngularJS Repeat on Arrays via external Controller:</h4>
+<h4>AngularJS Filtering Input:</h4>
 
 <div data-ng-app="" data-ng-controller="carsController">
+	<p><input type="text" data-ng-model="test"></p>
 
 	<ul>
-		<li data-ng-repeat="x in cars">
-			{{ x.make + ' ' + x.model }}
-		</li>
+		<li data-ng-repeat="x in cars | filter:test | orderBy:'make' ">
+			{{ (x.make | uppercase ) + " " + x.model }}
+		<li>
 	</ul>
 </div>
 

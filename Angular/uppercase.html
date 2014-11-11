@@ -9,16 +9,13 @@
 
 <h4>AngularJS Repeat on Arrays via external Controller:</h4>
 
-<div data-ng-app="" data-ng-controller="carsController">
+<div data-ng-app="" data-ng-controller="personController">
+	<p>The last name in UPPERCASE is: {{ lastName | uppercase }} </p>
+	<p>The first name in lowercase is: {{ firstName | lowercase }} </p>
 
-	<ul>
-		<li data-ng-repeat="x in cars">
-			{{ x.make + ' ' + x.model }}
-		</li>
-	</ul>
 </div>
 
-<script src="carsController.js"></script>
+<script src="personController.js"></script>
 
 </body>
 </html>

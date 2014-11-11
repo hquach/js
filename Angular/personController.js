@@ -1,7 +1,7 @@
 function personController($scope) {
-	$scope.firstName = "",
-	$scope.lastName = "",
+	$scope.firstName = "John",
+	$scope.lastName = "Smith",
 	$scope.fullName = function() {
-      return $scope.firstName + " " + $scope.lastName;
+      return $scope.firstName.uppercase + " " + $scope.lastName.lowercase;
 	}
 }
