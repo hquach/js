@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+<h4>AngularJS Repeat on Arrays via external Controller:</h4>
+
+<div data-ng-app="" data-ng-init="carsController">
+
+	<ul>
+		<li data-ng-repeat="x in cars">
+			{{ x.make + ' ' + x.model }}
+		</li>
+	</ul>
+</div>
+
+<script src="carsController.js"></script>
+
+</body>
+</html>
