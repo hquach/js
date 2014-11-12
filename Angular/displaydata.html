@@ -6,7 +6,7 @@
 
 <style>
 table, th , td {
-  border: 1px "grey";
+  border: 1px solid grey;
   border-collapse: collapse;
   padding: 5px;
 }
@@ -39,7 +39,16 @@ table tr:nth-child(even) {
 	function customersController($scope, $http) {
 		$http.get("http://www.w3schools.com/website/Customers_JSON.php").success(function(response) {$scope.names = response;});
 	}
+
+//Fetching Data from ASP.NET Server Running SQL
+//function customersController($scope, $http) {
+//  $http.get("http://www.w3schools.com//website/Customers_sql.aspx")
+//  .success(function(response) {$scope.names = response;});
+//}
+
 </script>
+
+
 
 </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+<h4>AngularJS Hide Element:</h4>
+
+<div data-ng-app="" data-ng-controller="personController">
+	<button data-ng-click="toggle()">Hide User</button>
+
+	<p data-ng-hide="myVar">
+		First Name: <input type="text" data-ng-model="firstName"><br />
+		Last Name: <input type="text" data-ng-model="lastName"><br /><br />
+		Full Name: {{ firstName + " " + lastName }}
+	</p>
+</div>
+
+<script type="text/javascript">
+	function personController($scope) {
+		$scope.firstName = "John";
+		$scope.lastName = "Smith";
+		$scope.myVar = false;
+		$scope.toggle = function() {
+			$scope.myVar = !$scope.myVar;
+		}
+	}
+</script>
+
+</html>
