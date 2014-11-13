@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+<h4>AngularJS Controller with Module Example:</h4>
+
+<div data-ng-app="myApp" data-ng-controller="myCtrl">
+	{{ firstName + " " + lastName }}
+</div>
+
+<script type="text/javascript">
+	var app = angular.module("myApp", []);
+
+	app.controller("myCtrl", function($scope) {
+		$scope.firstName = "john";
+		$scope.lastName = "smith";
+	}
+		);
+</script>
+
+</html>

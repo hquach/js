@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+</head>
+
+<body>
+
+<h4>AngularJS Input Validation:</h4>
+
+<form data-ng-app="" data-ng-controller="validateCtrl" name="myForm" novalidate>
+
+	<p>Username: <br />
+		<input type="text" name="user" data-ng-model="user" required>
+		<span style="color:red" data-ng-show="myForm.user.$dirty && myForm.user.$invalid">
+			<span data-ng-show="myForm.user.$error.required">Username is required.</span>
+		</span>
+
+	<p>Email: <br />
+		<input type="email" name="email" data-ng-model="email" required>
+		<span style="color:red" data-ng-show="myForm.email.$dirty && myForm.email.$invalid">
+			<span data-ng-show="myForm.email.$error.required">Email is required.</span>
+			<span data-ng-show="myForm.email.$error.email">Invalid Email Address.</span>
+		</span>
+
+	<p>
+		<input type="submit" data-ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid">
+	</p>
+
+</form>
+
+<script type="text/javascript">
+	function validateCtrl($scope) {
+		$scope.user = "John Smith";
+		$scope.email = "john.smith@gmail.com";
+	}
+</script>
+
+
+</html>
