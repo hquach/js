@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html data-ng-app="myNoteApp"> <!-- module --> 
+<head>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body data-ng-controller="myNoteCtrl">
+
+<h4><u>My Note:</u></h4>
+
+<p>
+	<textarea data-ng-model="message" cols="40" rows="10"></textarea> 
+	<!-- bind ng-model directive binds a <textarea> to the controller variable message -->
+</p>
+
+<p>
+	<button data-ng-click="save()">Save</button> <!--  invoke the controller functions clear() and save() in myNoteCtrl -->
+	<button data-ng-click="clear()">Clear</button> 
+</p>
+
+<p>
+	Number of characters left: <span data-ng-bind="left()"></span>
+</p>
+
+<script src="myNoteApp.js"></script>
+<script src="myNoteCtrl.js"></script>
+
+</body>
+</html>
